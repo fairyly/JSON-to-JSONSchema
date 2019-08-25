@@ -1,0 +1,29 @@
+{
+  "name": "json-to-jsonschema",
+  "version": "1.0.0",
+  "description": "json-to-jsonschema",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fairyly/JSON-to-JSONSchema.git"
+  },
+  "keywords": [
+    "json-to-jsonschema",
+    "json",
+    "schema",
+    "jsonschema"
+  ],
+  "author": "fairyly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fairyly/JSON-to-JSONSchema/issues"
+  },
+  "homepage": "https://github.com/fairyly/JSON-to-JSONSchema#readme",
+  "dependencies": {
+    "is-type-of": "^1.2.1",
+    "type-of-is": "^3.5.1"
+  }
+}

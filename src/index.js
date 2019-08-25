@@ -1,0 +1,1 @@
+exports.jsonToJsonschema = require('./jsonToJsonschema')

@@ -1,0 +1,18 @@
+[
+  {
+    "type": "string",
+    "level": "1",
+    "currentKey": "field",
+    "frontOriginType": "header",
+    "backOriginType": "",
+    "isBackendField": 0,
+    "defaultVal": "",
+    "isRootKey": "",
+    "rootKey": "",
+    "objectlass": "",
+    "description": "",
+    "example": "",
+    "check": true,
+    "properties": {}
+  }
+]

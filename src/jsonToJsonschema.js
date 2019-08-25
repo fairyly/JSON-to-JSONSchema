@@ -41,16 +41,35 @@ function processObject(object, output, nested) {
   return arr;
 }
 
+// json 数组转 JSON Schema
+function processArrObj(object) {
+
+  return 
+}
+
 // 如果传入的是数组，处理数组，返回 JSON schema
 function processArray(array, output, nested) {
-
+  if (output) {
+    output.properties = output.properties || {}
+  }
+  for (let i = 0; i <= array.length-1; i++) {
+    if (array[i].children.length) {
+      array[i].type == 'object';
+      array[i].properties = {};
+      array[i].properties = processArray(array[i].children, {});
+      output.properties[array[i].currentKey] = array[i];
+      continue;
+    }
+    
+    output.properties[array[i].currentKey] = array[i];
+  }
+  return output;
 }
 
 module.exports = function Process (currentKey, importData) {
   let processOutput
   let output = {
-    $schema: DRAFT,
-    arr: []
+    $schema: DRAFT
   }
 
   // 判断传入的 currentKey 是否存在
@@ -65,20 +84,14 @@ module.exports = function Process (currentKey, importData) {
   output.type = Type.string(importData).toLowerCase()
 
   // 如果是对象，就去处理成数组
-  if (output.type === 'importData') {
-    output =  processObject(importData)
+  if (output.type === 'object') {
+    output = processObject(importData)
   }
   
   // 如果是数组，就去处理成 JSON schema 对象
   if (output.type === 'array') {
-    processOutput = processArray(importData)
-    output.type = processOutput.type
-    output.items = processOutput.items
-
-    if (output.currentKey) {
-      output.items.currentKey = output.currentKey
-      output.currentKey += ' Set'
-    }
+    output = processArray(importData, {});
+    output.type = 'object';
   }
 
   // Output

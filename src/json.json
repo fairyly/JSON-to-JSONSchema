@@ -13,6 +13,39 @@
     "description": "",
     "example": "",
     "check": true,
-    "properties": {}
-  }
+    "children": []
+  },
+  {
+    "type": "string",
+    "level": "1",
+    "currentKey": "field2",
+    "frontOriginType": "header",
+    "backOriginType": "",
+    "isBackendField": 0,
+    "defaultVal": "",
+    "isRootKey": "",
+    "rootKey": "",
+    "objectlass": "",
+    "description": "",
+    "example": "",
+    "check": true,
+    "children": [
+      {
+        "type": "string",
+        "level": "2",
+        "currentKey": "field22",
+        "frontOriginType": "header",
+        "backOriginType": "",
+        "isBackendField": 0,
+        "defaultVal": "",
+        "isRootKey": "",
+        "rootKey": "",
+        "objectlass": "",
+        "description": "",
+        "example": "",
+        "check": true,
+        "children": []
+      }
+    ]
+  },
 ]

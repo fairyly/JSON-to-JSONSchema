@@ -5,8 +5,10 @@
 
 ## Install
 
+>仅用于内部，不发布
+
 ```
-npm install json-to-jsonschema -S
+// npm install json-to-jsonschema -S
 ```
 
 

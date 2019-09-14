@@ -25,14 +25,14 @@ function processObject(object, output, nested) {
     // 如果这一行数据的 type 是 object
     if (value.type == 'object') {
       value.children = [];
-      value.children.push(processObject(value));
+      value.children = processObject(value);
       arr.push(value)
       continue
     }
     // 如果这一行数据的 type 是 array
     if (value.type == 'array') {
       value.children = [];
-      value.children.push(processObject(value.items));
+      value.children = processObject(value.items);
       arr.push(value)
       continue
     }
